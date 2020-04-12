@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(26, 26, 26);
+}
+
+nav {
+  background-color: yellowgreen;
+}
+
+#gallery {
+  background-color: white;
+}
+
+
+#active {
+  background-color: pink;
+}
+
+nav {
+  width: 100vw;
+  height: 7vh;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+}
+
+nav a {
+  height: 100%;
+  display: inline-flex;
+  float: left;
+  width: 50vw;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  opacity: 90%;
+}
+
+#introduction {
+  margin: 8vh auto 2vh auto;
+  width: 90vw;
+  text-align: center;
+  border: 1px solid grey;
+  border-radius: 50px;
+  padding: 10px;
+  background-color: rgb(140, 140, 140);
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  font-family: 'Dancing Script', cursive, sans-serif;
+  color: dimgrey;
+}
+
+#introduction p {
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 2px;
+}
+
+#gallery {
+  padding: 20px 0 20px 0;
+  margin: 0 auto;
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.piccontainer {
+  width: 250px;
+  max-height: 150px;
+  overflow: hidden;
+}
+.photos {
+  width: 250px;
+  cursor: pointer;
+}
+
+.polaroid {
+  width: 250px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 30px;
+  position: relative;
+  transition: all .5s linear;
+}
+
+.polaroid p {
+  text-align: center;
+  padding: 20px 0 20px 0;
+}
+
+.polaroid:hover {
+  transform: scale(1.1,1.1); /**** lecserélni majd fordított árnyékra ****/
+  transition: all .5s linear;
+  box-shadow: -10px 10px 8px 0 rgba(0, 0, 0, 0.2), 
+               -10px 10px 20px 0 rgba(0, 0, 0, 0.19),
+               4px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#kontakt {
+  margin: 8vh auto 2vh auto;
+  text-align: center;
+}
+
+#impresszum {
+  text-align: center;
+}
+
+footer {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/********************************************************************************************************
+******THIS CODE PIECE IS FROM https://www.w3schools.com/css/tryit.asp?filename=trycss_image_modal_js ****
+********************************************************************************************************/
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.1)} 
+  to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+/********************************************************************************************************
+*********************************************END HERE ***************************************************
+********************************************************************************************************/
